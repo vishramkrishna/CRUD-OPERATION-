@@ -1,0 +1,44 @@
+{
+  "name": "giden",
+  "version": "0.0.1",
+  "description": "Giden Node Server w/ Babel",
+  "main": "src/server.js",
+  "scripts": {
+    "build": "babel src -d dist --source-maps",
+    "start": "nodemon --exec babel-node src/server.js",
+    "serve": "npm run build && node build/server.js",
+    "test": "npm run build && mocha --require @babel/register",
+    "dist": "babel src -d dist --copy-files"
+  },
+  "author": "Vishal RK",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.4.4",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.5",
+    "body-parser": "1.18.2",
+    "compression": "1.7.2",
+    "cookie-parser": "1.4.3",
+    "cors": "2.8.4",
+    "dotenv": "^8.0.0",
+    "express": "4.16.3",
+    "express-jwt": "5.3.1",
+    "handlebars": "^4.3.1",
+    "helmet": "3.12.0",
+    "jsonwebtoken": "8.2.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.5.10",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "stripe": "^7.9.0"
+  }
+}
